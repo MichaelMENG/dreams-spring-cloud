@@ -1,0 +1,17 @@
+# 1.Eureka高可用，如果两台，互相注册，三台以上，1向2，3注册，类似
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-2:8762/eureka/
+# TODO: 是否注册到 eureka , 高可用配置时设置为true, 不配置即可
+#    register-with-eureka: false
+#  server:
+#    # 0.此为Eureka Server的自我保护
+#    # 1.如果频繁的重启Client，Eureka会有红色错误提示，但仍然会显示Client存在，所谓『宁可信其有，不可信其无』
+#    # 2.此选项默认为true, 只可在开发模式下设为false, 生产环境下要恢复默认
+#    enable-self-preservation: false
+spring:
+  application:
+    name: eureka
+server:
+  port: 8761

@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+# 1) 配置 gitee.com 服务器
+#          uri: https://gitee.com/dreamstep36/config-repo
+#          username: dreamstep36@163.com
+#          password: passw0RD
+#          basedir: /Users/dreamstep36/ds/dreams-spring-clouid/dreams-spring-cloud-config/basedir-001
+# 2）配置 gitlab 服务器，注意必须以 .git 结尾
+          uri: http://192.168.1.99/michael/config-repo.git
+          username: michael
+          password: passw9rd
+          basedir: ./basedir
+#          todo: why?
+#          search-paths: /config-repo
+  rabbitmq:
+    host: 192.168.1.98
+    port: 5672
+    username: admin
+    password: 123456
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-1:8761/eureka/, http://eureka-2:8762/eureka/
+  instance:
+    prefer-ip-address: true
+
+
