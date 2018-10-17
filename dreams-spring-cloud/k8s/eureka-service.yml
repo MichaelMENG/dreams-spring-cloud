@@ -34,13 +34,13 @@ spec:
       containers:
         - name: eureka-1
           image: hub.dreams.com/dreams-spring-cloud/eureka:latest
-          command:
+          args:
             - "-Dspring.profiles.active=eureka-1"
           ports:
             - containerPort: 8761
         - name: eureka-2
           image: hub.dreams.com/dreams-spring-cloud/eureka:latest
-          command:
+          args:
             - "-Dspring.profiles.active=eureka-2"
           ports:
             - containerPort: 8762
