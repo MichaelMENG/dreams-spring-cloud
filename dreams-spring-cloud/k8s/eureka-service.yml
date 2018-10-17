@@ -11,13 +11,14 @@ spec:
       port: 8761
       protocol: TCP
       targetPort: 8761
+      nodePort: 8761
     - name: eureka-2-port
       port: 8762
       protocol: TCP
       targetPort: 8762
+      nodePort: 8762
   selector:
-    app: eureka-service
-  sessionAffinity: None
+    app: eureka
   type: NodePort
 ---
 apiVersion: apps/v1beta1
