@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: eureka-service
+  name: eureka-service
+  namespace: default
+spec:
+  ports:
+    - name: eureka-1-port
+      port: 8761
+      protocol: TCP
+      targetProt: 8761
+    - name: eureka-2-port
+      port: 8762
+      protocol: TCP
+      targetPort: 8762
+  selector:
+    app: eureka-service
+  sessionAffinity: None
+  type: ClusterIP
+---
+apiVersion: apps/vibeta1
+kind: Deployment
+metadata:
+  name: eureka-service-deployment
+spec:
+  repliccas: 1
+  template:
+    metadata:
+      labels:
+        app: eureka-service
+    spec:
+      containers:
+        - name: eureka-1
+          image: hub.dreams.com/dreams-spring-cloud/eureka:latest
+          ports:
+            - containerPort: 8761
+        - name: eureka-2
+          image: hub.dreams.com/dreams-spring-cloud/eureka:latest
+          ports:
+            - containerPort: 8762
