@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: eureka-2
+  name: eureka-service-2
+  namespace: default
+spec:
+  ports:
+    - name: eureka-2-port
+      port: 8762
+      protocol: TCP
+      targetPort: 8762
+      nodePort: 30002
+  selector:
+    app: eureka-service-2
+  type: NodePort
+
+---
+
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: eureka-service-deployment-2
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: eureka-2
+    spec:
+      containers:
+        - name: eureka-2
+          image: hub.dreams.com/dreams-spring-cloud/eureka:latest
+          args:
+            - "-Dspring.profiles.active=eureka-2"
+          ports:
+            - containerPort: 8762
+

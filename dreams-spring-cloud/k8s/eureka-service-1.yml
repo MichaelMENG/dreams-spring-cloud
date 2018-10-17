@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: eureka
-  name: eureka-service
+    app: eureka-1
+  name: eureka-service-1
   namespace: default
 spec:
   ports:
@@ -12,13 +12,8 @@ spec:
       protocol: TCP
       targetPort: 8761
       nodePort: 30001
-    - name: eureka-2-port
-      port: 8762
-      protocol: TCP
-      targetPort: 8762
-      nodePort: 30002
   selector:
-    app: eureka
+    app: eureka-service-1
   type: NodePort
 
 ---
@@ -26,13 +21,13 @@ spec:
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: eureka-service-deployment
+  name: eureka-service-deployment-1
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: eureka
+        app: eureka-1
     spec:
       containers:
         - name: eureka-1
@@ -41,9 +36,4 @@ spec:
             - "-Dspring.profiles.active=eureka-1"
           ports:
             - containerPort: 8761
-        - name: eureka-2
-          image: hub.dreams.com/dreams-spring-cloud/eureka:latest
-          args:
-          - "-Dspring.profiles.active=eureka-2"
-          ports:
-          - containerPort: 8762
+
