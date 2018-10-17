@@ -18,7 +18,7 @@ spec:
   selector:
     app: eureka-service
   sessionAffinity: None
-  type: ClusterIP
+  type: NodePort
 ---
 apiVersion: apps/vibeta1
 kind: Deployment
