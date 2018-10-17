@@ -12,6 +12,6 @@ eureka:
 #    enable-self-preservation: false
 spring:
   application:
-    name: eureka
+    name: eureka-2
 server:
   port: 8762
