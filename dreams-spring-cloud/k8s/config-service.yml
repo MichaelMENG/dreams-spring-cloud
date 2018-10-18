@@ -20,18 +20,18 @@ spec:
 ---
 
 apiVersion: apps/v1beta1
-kind: Development
+kind: Deployment
 metadata:
   name: config-deployment
 spec:
   replicas: 1
   template:
-    metdata:
+    metadata:
       labels:
         app: config
     spec:
       containers:
-        - name: config
-          image: hub.dreams.com/dreams-spring-cloud/config:latest
-          ports:
-            - containerPort: 8080
+      - name: config
+        image: hub.dreams.com/dreams-spring-cloud/config:latest
+        ports:
+        - containerPort: 8080
