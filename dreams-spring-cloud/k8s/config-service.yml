@@ -16,7 +16,9 @@ spec:
     app: config
   sessionAffinity: None
   type: NodePort
+
 ---
+
 apiVersion: apps/v1beta1
 kind: Development
 metadata:
