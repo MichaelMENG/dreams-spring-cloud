@@ -66,4 +66,5 @@ management:
 #logging:
 #  level:
 #    org.springframework.cloud.openfeign: debug
-
+server:
+  port: 8080

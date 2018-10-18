@@ -32,6 +32,6 @@ spec:
     spec:
       containers:
       - name: user
-        image: hub.dreams.com/dreams-spring-cloud/user:latest
+        image: hub.dreams.com/dreams-spring-cloud/user:1.0
         ports:
         - containerPort: 8080

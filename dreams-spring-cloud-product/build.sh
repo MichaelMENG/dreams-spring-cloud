@@ -2,7 +2,7 @@
 
 mvn clean package -DskipTests -U
 
-docker build -t hub.dreams.com/dreams-spring-cloud/product:latest .
+docker build -t hub.dreams.com/dreams-spring-cloud/product:1.0 .
 
-docker push hub.dreams.com/dreams-spring-cloud/product:latest
+docker push hub.dreams.com/dreams-spring-cloud/product:1.0
 
