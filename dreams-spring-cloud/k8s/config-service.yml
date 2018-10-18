@@ -2,33 +2,34 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: config-service
-  name: config-service
+    app: config
+  name: config
   namespace: default
 spec:
   ports:
-    - name: config-service-port
+    - name: config-port
       port: 8080
       protocol: TCP
       targetPort: 8080
+      nodePort: 30003
   selector:
-    app: user-service
+    app: config
   sessionAffinity: None
-  type: ClusterIP
+  type: NodePort
 ---
 apiVersion: apps/v1beta1
 kind: Development
 metadata:
-  name: config-service-deployment
+  name: config-deployment
 spec:
   replicas: 1
   template:
     metdata:
       labels:
-        app: config-service
+        app: config
     spec:
       containers:
-        - name: config-service
+        - name: config
           image: hub.dreams.com/dreams-spring-cloud/config:latest
           ports:
             - containerPort: 8080
