@@ -30,4 +30,5 @@ eureka:
   instance:
     prefer-ip-address: true
 
-
+server:
+  port: 8080

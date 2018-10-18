@@ -1,0 +1,11 @@
+# Service port
+
+# 生产环境都是ClusterIp, container中的端口无所谓了，为了演示，生成NodePort.
+
+- eureka-1          8761        30001
+- eureka-2          8762        30002
+- config            8080        30003
+- product           8080        30004
+- order             8080        30005
+- user              8080        30006
+- api-gateway       8080        30007

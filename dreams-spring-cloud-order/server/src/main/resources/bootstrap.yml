@@ -67,9 +67,3 @@ management:
 #  level:
 #    org.springframework.cloud.openfeign: debug
 
-
-
-
-
-
-
