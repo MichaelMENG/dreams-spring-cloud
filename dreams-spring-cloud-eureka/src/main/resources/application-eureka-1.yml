@@ -3,6 +3,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka-2:8762/eureka/
+  instance:
+    prefer-ip-address: true
 # TODO: 是否注册到 eureka , 高可用配置时设置为true, 不配置即可
 #    register-with-eureka: false
 #  server:

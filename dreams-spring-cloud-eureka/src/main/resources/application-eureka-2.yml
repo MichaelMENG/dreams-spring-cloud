@@ -3,7 +3,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka-1:8761/eureka/
-# TODO: 是否注册到 eureka , 高可用配置时设置为true, 不配置即可
+  instance:
+    prefer-ip-address: true
+  # TODO: 是否注册到 eureka , 高可用配置时设置为true, 不配置即可
 #    register-with-eureka: true
 #  server:
     # 0.此为Eureka Server的自我保护
