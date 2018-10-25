@@ -11,4 +11,5 @@ docker run -d \
   -p 50000:50000 \
   --env JAVA_OPTS="-Djava.util.logging.config.file=/var/jenkins_home/log.properties" \
   -v /home/vagrant/jenkins/jenkins_home:/var/jenkins_home \
-  jenkins/jenkins:lts
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  jenkins-maven:lts
