@@ -10,7 +10,7 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "product_info") // todo: 可以不写，因为按规则，名字就是ProductInfo.
+@Table(name = "product_info")
 public class ProductInfo {
 
     @Id

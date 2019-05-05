@@ -14,7 +14,7 @@ import java.util.Date;
 public class ProductCategory {
 
     @Id
-    @GeneratedValue // todo: 自增
+    @GeneratedValue // 自增
     private Integer categoryId;
 
     /** 类目名字. */

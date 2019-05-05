@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
-/* TODO: 1.EurekaServer 包括 EurekaClient */
+/* EurekaServer 包括 EurekaClient */
 
 @SpringBootApplication
 @EnableEurekaServer

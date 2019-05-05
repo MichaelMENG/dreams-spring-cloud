@@ -6,16 +6,15 @@ spring:
       server:
         git:
 # 1) 配置 gitee.com 服务器
-#          uri: https://gitee.com/dreamstep36/config-repo
-#          username: dreamstep36@163.com
-#          password: passw0RD
-#          basedir: /Users/dreamstep36/ds/dreams-spring-clouid/dreams-spring-cloud-config/basedir-001
+#          uri: https://gitee.com/xxx/config-repo
+#          username: xxx@163.com
+#          password: xxx
+#          basedir: /the/path/to/dreams-spring-cloud-config/basedir-001
 # 2）配置 gitlab 服务器，注意必须以 .git 结尾
           uri: http://192.168.1.99/michael/config-repo.git
           username: michael
-          password: passw9rd
+          password: 123456
           basedir: ./basedir-001
-#          todo: why?
 #          search-paths: /config-repo
   rabbitmq:
     host: 192.168.1.98

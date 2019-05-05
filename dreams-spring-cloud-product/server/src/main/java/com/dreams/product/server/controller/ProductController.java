@@ -35,7 +35,7 @@ public class ProductController {
      */
     @GetMapping("/list")
     /**
-     * TODO : 跨域
+     * 跨域
      */
     @CrossOrigin
     public ResultVO<ProductVO> list() {
@@ -84,7 +84,7 @@ public class ProductController {
     public List<ProductInfoOutput> listForOrder(@RequestBody List<String> productIdList) {
 
         /**
-         * TODO: 测试 Hystrix 熔断
+         * 测试 Hystrix 熔断
          */
         /*try {
             Thread.sleep(2000);

@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
 
-/* todo: 两种形式
+/* 两种形式
 @RunWith(SpringRunner.class)
 @SpringBootTest
 */

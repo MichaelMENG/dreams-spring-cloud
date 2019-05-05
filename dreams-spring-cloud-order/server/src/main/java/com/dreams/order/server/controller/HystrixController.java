@@ -9,11 +9,6 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
 
-/**
- * TODO: 1) @HystrixProperty -> name 不用记，
- * TODO: 2) 点击 HystrixProperty -> com.netflix.hystrix中的hystrix，可找到相关的包 & 文件,
- * TODO: 3) HystrixCommandProperties
- */
 @RestController
 @DefaultProperties(defaultFallback = "defaultFallback")
 public class HystrixController {
@@ -33,10 +28,7 @@ public class HystrixController {
             @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "60")
     })
 
-    /**
-     * TODO: 可以将以上代码写入配置中，但是注意一定加入 @HystrixCommand
-     * @return
-     */
+
     //@HystrixCommand
     @GetMapping("/getProductInfoList")
     public String getProductInfoList() {

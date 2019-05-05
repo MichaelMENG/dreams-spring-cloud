@@ -89,8 +89,7 @@
             <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
 
-        <!-- TODO: 1) spring-cloud-starter-XXX 已经弃用，应为 spring-cloud-starter-netflix-XXX -->
-        <!-- TODO: 2) 包有问题，第一时间查 mvnrepository.com -->
+        <!-- spring-cloud-starter-XXX 已经弃用，应为 spring-cloud-starter-netflix-XXX -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>

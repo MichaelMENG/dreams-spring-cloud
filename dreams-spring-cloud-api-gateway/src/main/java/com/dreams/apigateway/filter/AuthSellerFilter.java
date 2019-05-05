@@ -19,8 +19,6 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
 
 /**
  * 权限拦截，区分买家 & 卖家
- *
- * TODO: 不应该读取数据库，而应该读取redis
  */
 @Component
 public class AuthSellerFilter extends ZuulFilter {

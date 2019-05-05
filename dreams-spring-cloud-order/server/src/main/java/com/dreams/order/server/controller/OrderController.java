@@ -18,9 +18,6 @@ import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * TODO: 1. postman只有 finish?openId=1234567 才可以，Body
- */
 @RestController
 @RequestMapping("/order")
 @ResponseBody
