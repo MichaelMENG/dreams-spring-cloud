@@ -14,7 +14,7 @@ spring:
           uri: http://192.168.1.99/michael/config-repo.git
           username: michael
           password: passw9rd
-          basedir: ./basedir
+          basedir: ./basedir-001
 #          todo: why?
 #          search-paths: /config-repo
   rabbitmq:
