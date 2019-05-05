@@ -1,1 +1,1 @@
-# Spring Cloud, Docker, Kubernetes, DevOps demo.
+# Spring Cloud, Docker, Kubernetes demo.
